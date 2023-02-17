@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Страница результатов поиска/фильтрации">
+  <meta name="keywords" content="Povarenok, рецепты, html">
+  <title>Povarenok</title>
+  <link rel="stylesheet" href="/css/app.css">
+  <script type="text/javascript" src="../js/app.js"> </script>
+  <script type="text/javascript" src="/js/jquery-3.6.2.js"></script>
+</head>
+<body onload="loadInfoSearchRec()">
+<div id="headerBlock">
+  <div><a href="index.html"><img src="../img/logo.png" id="logoImage" alt="Логотип"> </a></div>
+
+  <div id="textPovarenok"> Povarenok</div>
+
+  <div id="searchBlock">
+    <div><img src="../img/lupa.png" id="lupa" alt=""></div>
+
+    <div>
+      <input type="searchLine" placeholder="Поиск по рецептам" maxlength="100" required
+             oninput="this.value = this.value.replace(/[^а-яёА-ЯЁ\s]/gi, '');"
+             name="searchLine" id="searchLine">
+    </div>
+
+    <div>
+      <a href="searchRes.html">
+        <button type="submit" id="findButton" onclick="searchKeywords()" name="findButton"> Найти</button>
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <img src="../img/user.png" id="signInImage" alt="Пользователь">
+  </div>
+
+<!--  <div>-->
+<!--    <a id="signInButton" href="signIn.html" target="_self"> Войти </a>-->
+<!--  </div>-->
+
+  <div id="textSearchRes"> Найденные рецепты</div>
+  <div id="textCountRes"> ВСЕГО РЕЦЕПТОВ НАЙДЕНО: 0</div>
+  <div id="textFilterRes"> фильтры: </div>
+</div>
+
+<div id="SearchingRec">
+</div>
+
+</body>
+</html>

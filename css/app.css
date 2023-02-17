@@ -1,0 +1,973 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+@media screen  {
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  body {
+    background-color: white;
+    line-height: 21px;
+  }
+  /*Ширина = 1536, Высота = 750*/
+
+  /*ШАПКА*/
+  #headerBlock {
+    background: #e9ba93;
+    width: 1536px;
+    height: 110px;
+    border-bottom: 3px solid #af6343;
+    position: absolute;
+  }
+
+  #logoImage {
+    float: left;
+    position: absolute;
+    top: 15px;
+    left: 49px;
+    height: 79px;
+    width:83px;
+    object-fit:cover;
+  }
+
+  #textPovarenok {
+    color: black;
+    font-size: 34px;
+    float: left;
+    top: 49px;
+    position: absolute;
+    left: 155px;
+  }
+
+  #searchBlock {
+    background: white;
+    height: 50px;
+    border: 3px solid #af6343;
+    border-radius: 20px;
+
+    width: 700px;
+    position: absolute;
+    top: 57px;
+    left: 440px;
+  }
+
+  #lupa {
+    position: absolute;
+    top: 15px;
+    left: 26px;
+    width: 20px;
+    height: 20px;
+  }
+
+  #searchLine {
+    color: black;
+    width: 500px;
+    position: absolute;
+    top: 12px;
+    left: 60px;
+    border: none;
+    font-size: 18px;
+  }
+
+  #searchLine:focus {
+    outline: none;
+  }
+
+  #findButton {
+    color: black;
+    font-size: 18px;
+    width: 100px;
+    position: absolute;
+    top: 8px;
+    left: 570px;
+    background-color: white;
+    border: 3px solid #af6343;
+    border-radius: 20px;
+  }
+
+  #findButton:hover {
+    background-color: #af6343;
+    color: white;
+  }
+
+  #signInImage {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 43px;
+    left: 1340px;
+  }
+
+  #signInButton {
+    color: black;
+    font-size: 22px;
+    position: absolute;
+    top: 49px;
+    left: 1383px;
+    text-decoration: none;
+    padding: 2px 5px;
+  }
+
+  #signInButton:hover {
+    border: 2px solid #af6343;
+    border-radius: 15px;
+  }
+
+  /*КАТЕГОРИЯ И ТИП КУХНИ INDEX*/
+  .comboBox {
+    color: black;
+    font-size: 16px;
+    width: 150px;
+    position: absolute;
+    background-color: white;
+    padding: 9px 10px;
+    border: 3px solid #af6343;
+    top: 149px;
+  }
+
+  .comboBox:focus {
+    outline: none;
+  }
+
+  #categoryIndex {
+    left:593px;
+  }
+
+  #typeCuis {
+    border-left: none;
+    left:743px;
+  }
+
+  #applyButton {
+    color: black;
+    font-size: 16px;
+    background-color: white;
+    border: 3px solid #af6343;
+    border-radius: 20px;
+    width: 118px;
+    height: 32px;
+    position: absolute;
+    left: 910px;
+    top: 158px;
+  }
+
+  #applyButton:hover {
+    background-color: #af6343;
+    color: white;
+  }
+
+  /*НЕДАВНИЕ РЕЦЕПТЫ INDEX*/
+  #textRecentlyAddedRecipes {
+    color: black;
+    font-size: 28px;
+    position: absolute;
+    top: 235px;
+    left: 560px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .blockRec {
+    height: 400px;
+    width: 310px;
+    background-color: #f6f3ef;
+    border: 3px solid #af6343;
+    position: absolute;
+    top: 290px;
+  }
+
+  /*СОДЕРЖИМОЕ БЛОКОВ С РЕЦЕПТАМИ INDEX*/
+  .recImage{
+    width: 220px;
+    height: 180px;
+    border: 3px solid black;
+    position: absolute;
+    top: 26px;
+    left: 45px;
+  }
+
+  .nameRec {
+    color: black;
+    text-decoration: none;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 235px;
+    left: 50px;
+    right: 50px;
+    text-align: center;
+  }
+
+  .nameRec:hover {
+    color: #af6343;
+  }
+
+  .nameAuthor {
+    color: black;
+    font-size: 16px;
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    right: 50px;
+    text-align: center;
+  }
+
+  .timeCookingRec {
+    color: black;
+    font-size: 16px;
+    position: absolute;
+    top: 340px;
+    left: 50px;
+    right: 50px;
+    text-align: center;
+  }
+
+  /*Общее для SIGNIN и SIGNUP*/
+  .signInUpBlock{
+    height: 400px;
+    width: 600px;
+    background-color: #f6f3ef;
+    border: 3px solid #af6343;
+    border-radius: 20px;
+    position: absolute;
+    top: 200px;
+    left: 468px;
+  }
+
+  .signInUpText{
+    color: black;
+    font-size: 28px;
+    position: absolute;
+    top: 32px;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+
+  .inputSignInUp{
+    background: white;
+    height: 30px;
+    font-size: 18px;
+    border: 3px solid #af6343;
+    width: 450px;
+    position: absolute;
+    left: 73px;
+  }
+
+  .inputSignInUp:focus {
+    outline: none;
+  }
+
+  .inputSignInUp::placeholder{
+    text-align:center;
+  }
+  /*ФОРМА ВХОДА SIGNIN*/
+
+  #textSignIn{
+    left: 115px;
+  }
+
+  #inputLogin{
+    top: 90px;
+  }
+
+  #inputPassword{
+    top: 150px;
+  }
+
+  #enterButton{
+    color: black;
+    font-size: 16px;
+    width: 115px;
+    height: 37px;
+    position: absolute;
+    top: 207px;
+    left: 245px;
+    background-color: white;
+    border: 3px solid #af6343;
+    border-radius: 20px;
+  }
+
+  #enterButton:disabled{
+    background-color: lightgrey;
+    border: 3px solid lightgrey;
+    cursor: not-allowed;
+  }
+
+  #enterButton:hover:enabled{
+    background-color: #af6343;
+    color: white;
+  }
+
+  #textSignInQuestion{
+    color: #767676;
+    font-size: 12px;
+    position: absolute;
+    top: 290px;
+    left: 225px;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+
+  #signUpButton{
+    color: black;
+    font-size: 16px;
+    width: 190px;
+    height: 37px;
+    position: absolute;
+    top: 320px;
+    left: 212px;
+    background-color: white;
+    border: 3px solid #af6343;
+    border-radius: 20px;
+  }
+  #signUpButton:hover{
+    background-color: #af6343;
+    color: white;
+  }
+
+  /*ФОРМА ВХОДА SIGNUP*/
+  #textSignUp{
+    top: 35px;
+    left: 205px;
+  }
+
+  #signUpLogin{
+    top: 95px;
+  }
+
+  #signUpPassword{
+    top: 155px;
+  }
+
+  #signUpEmail{
+    top: 215px;
+  }
+
+  #registerButton{
+    color: black;
+    font-size: 16px;
+    width: 190px;
+    height: 37px;
+    position: absolute;
+    top: 290px;
+    left: 210px;
+    background-color: white;
+    border: 3px solid #af6343;
+    border-radius: 20px;
+  }
+
+  #registerButton:disabled{
+    background-color: lightgrey;
+    border: 3px solid lightgrey;
+    cursor: not-allowed;
+  }
+
+  #registerButton:hover:enabled{
+    background-color: #af6343;
+    color: white;
+  }
+
+  /*ФОРМА ДОБАВЛЕНИЯ РЕЦЕПТА ADDRECIPE*/
+
+  /*ПРАВАЯ ЧАСТЬ*/
+  .inputAddRec{
+    background: white;
+    font-size: 18px;
+    border: 3px solid #AF63434D;
+    border-radius: 15px;
+    position: absolute;
+  }
+
+  .inputAddRec:focus {
+    outline: none;
+  }
+
+  #inputNameRec{
+    top: 160px;
+    height: 40px;
+    width: 450px;
+    left: 270px;
+    padding-left: 20px;
+  }
+
+  .line{
+    position: absolute;
+    background: #AF6343;
+    border: 1.25px solid #AF6343;
+    height: 0px;
+  }
+
+  #lineNameRec{
+    width: 480px;
+    top: 220px;
+    left: 268px;
+  }
+
+  #inputDecRec{
+    width: 850px;
+    height: 100px;
+    top: 240px;
+    left: 68px;
+    padding: 10px 10px 10px 20px;
+    resize: none;
+    box-sizing: border-box;
+  }
+
+  #lineDecRec{
+    width: 380px;
+    left: 65px;
+    top: 359px;
+  }
+
+  .addIngRec{
+    position: absolute;
+    background: white;
+    font-size: 18px;
+    width: 650px;
+    height: 30px;
+    padding-left: 20px;
+    left: 68px;
+    border: 2px solid #AF63434D;
+    border-radius: 15px;
+  }
+
+  #inputIngRec1{
+    top: 381px;
+  }
+
+  .addGrRec{
+    position: absolute;
+    background: white;
+    font-size: 18px;
+    width: 70px;
+    height: 30px;
+    left: 760px;
+    border: 2px solid #AF63434D;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .addGrRec::placeholder{
+    text-align: center;
+  }
+
+  #inputGrRec1{
+    top: 381px;
+  }
+
+  .deleteIngButton{
+    position: absolute;
+    left: 890px;
+    border: none;
+    background: none;
+    width: 17px;
+    height: 17px;
+  }
+  .deleteIngButton:hover .deleteIngImg{
+    width: 19px;
+    height: 19px;
+    outline: none;
+  }
+
+  .deleteIngImg{
+    width: 17px;
+    height: 17px;
+  }
+
+  #addIngButton{
+    position: absolute;
+    left: 68px;
+    top: 445px;
+    border: none;
+    background: none;
+    width: 25px;
+    height: 25px;
+  }
+  #addIngButton:hover .addIngImg{
+    width: 27px;
+    height: 27px;
+    outline: none;
+  }
+
+  .addIngImg{
+    width: 25px;
+    height: 25px;
+  }
+
+  #addIngText{
+    color: black;
+    font-size: 19px;
+    top: 447px;
+    position: absolute;
+    left: 105px;
+  }
+
+  #lineAddIngRec{
+    width: 380px;
+    left: 65px;
+    top: 490px;
+  }
+
+  #inputStepRec{
+    width: 850px;
+    height: 100px;
+    top: 514px;
+    left: 68px;
+    padding: 10px 10px 10px 20px;
+    resize: none;
+    box-sizing: border-box;
+  }
+
+  /*ЛЕВАЯ ЧАСТЬ*/
+
+  .dropImgZone{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 350px;
+    height: 250px;
+    left: 1050px;
+    top: 140px;
+    background: #F5F5F5;
+    border: 3px solid #AF6343;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .dropImgZone.active {
+    border: 5px solid #AF6343;
+  }
+
+  .image{
+    width: 350px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #addImgRecText{
+    font-size: 20px;
+    pointer-events: none;
+  }
+
+  #addImg{
+    height: 70px;
+    width: 70px;
+    margin-bottom: 15px;
+    pointer-events: none;
+  }
+
+  #comboBoxBlockAddRec{
+    position: absolute;
+    top: 420px;
+    left: 1080px;
+  }
+
+  #chooseCatText{
+    font-size: 18px;
+  }
+
+  .comboBoxAddRec {
+    position: absolute;
+    top: 35px;
+    color: black;
+    font-size: 16px;
+    width: 150px;
+    padding: 9px 10px;
+    background: #FFFFFF;
+    border: 3px solid rgba(175, 99, 67, 0.3);
+    box-shadow: 0px 0px 14px rgba(53, 64, 82, 0.05);
+  }
+
+  .comboBoxAddRec:focus {
+    outline: none;
+  }
+
+  #typeCuisAddRec{
+    left: 150px;
+    border-left: none;
+  }
+
+  #inputTimeCook{
+    font-size: 16px;
+    width: 320px;
+    position: absolute;
+    top: 110px;
+    left: -10px;
+    text-align: center;
+  }
+
+  #createRecButton{
+    color: black;
+    font-size: 20px;
+    width: 170px;
+    height: 60px;
+    position: absolute;
+    top: 180px;
+    left: 70px;
+    background-color: white;
+    border: 3px solid #af6343;
+    border-radius: 20px;
+  }
+  #createRecButton:disabled{
+    background-color: lightgrey;
+    border: 3px solid lightgrey;
+    cursor: not-allowed;
+  }
+  #createRecButton:hover:enabled{
+    background-color: #af6343;
+    color: white;
+  }
+
+  /*ИНФО О РЕЦЕПТЕ RECIPE*/
+  /*ЛЕВЫЙ БЛОК*/
+  .infoRec{
+    color: black;
+    outline: none;
+    background-color: white;
+    resize: none;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 3px solid #AF6343;
+    position: absolute;
+    padding-bottom: 20px;
+  }
+
+  #infoNameRec{
+    font-size: 24px;
+    top: 145px;
+    left: 300px;
+    width: 600px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 0px;
+  }
+
+  #infoRecLeftBlock{
+    position: absolute;
+    outline: none;
+    background-color: white;
+    left: 61px;
+  }
+
+  #infoDecRec{
+    font-size: 20px;
+    width: 900px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    letter-spacing: 0.07875px;
+    padding-left: 0px;
+  }
+
+  #infoIngBlock{
+    font-size: 20px;
+    position: absolute;
+  }
+
+  #infoIngRec{
+    font-size: 20px;
+    width: 700px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    letter-spacing: 0.07875px;
+    padding-left: 0px;
+    white-space: pre-line;
+  }
+
+  #infoIngText{
+    padding-left: 0px;
+    padding-bottom: 15px;
+  }
+
+  #infoStepText{
+    padding-left: 0px;
+    padding-bottom: 15px;
+  }
+
+  #infoStepBlock{
+    font-size: 20px;
+    position: absolute;
+    width: 1000px;
+  }
+
+  #infoStepRec{
+    font-size: 20px;
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    letter-spacing: 0.07875px;
+    border-bottom: none;
+    padding-left: 0px;
+  }
+
+  /*ПРАВЫЙ БЛОК*/
+  #infoRecRightBlock{
+    position: absolute;
+    left: 980px;
+    top: 135px;
+    font-size: 16px;
+    width: 400px;
+  }
+
+  #infoRecImage{
+    width: 400px;
+    height: 300px;
+  }
+
+  #catBlockInfoRec{
+    position: absolute;
+    top: 350px;
+    left: 170px;
+  }
+
+  #infoCatRec{
+    position: absolute;
+    top: 0px;
+    left: 85px;
+  }
+
+  #typeCusBlockInfoRec{
+    position: absolute;
+    top: 380px;
+    left: 170px;
+  }
+
+  #infoTypeCusRec{
+    position: absolute;
+    top: 0px;
+    left: 85px;
+  }
+
+  #authorBlockInfoRec{
+    position: absolute;
+    top: 410px;
+    left: 170px;
+  }
+
+  #infoAuthorRec{
+    position: absolute;
+    top: 0px;
+    left: 55px;
+  }
+
+  #timeCookingBlockInfoRec{
+    position: absolute;
+    top: 440px;
+    left: 125px;
+  }
+
+  #infoTimeCookingRec{
+    position: absolute;
+    top: 0px;
+    left: 175px;
+    width: 80px;
+  }
+
+  #dateBlockInfoRec{
+    position: absolute;
+    top: 470px;
+    left: 140px;
+  }
+
+  #infoDateRec{
+    position: absolute;
+    top: 0px;
+    left: 138px;
+    width: 80px;
+  }
+
+  #addFavorites{
+    color: black;
+    font-size: 16px;
+    width: 210px;
+    height: 40px;
+    position: absolute;
+    top: 510px;
+    left: 150px;
+    background-color: white;
+    border: 3px solid #af6343;
+    border-radius: 15px;
+  }
+
+  #addFavorites:disabled{
+    background-color: lightgrey;
+    border: 3px solid lightgrey;
+    cursor: not-allowed;
+  }
+
+  #addFavorites:hover:enabled{
+    background-color: #af6343;
+    color: white;
+  }
+
+  /*ЛИЧНЫЙ КАБИНЕТ*/
+  #textUserName{
+    color: black;
+    font-size: 22px;
+    position: absolute;
+    top: 49px;
+    left: 1390px;
+  }
+
+  #textUserAccount{
+    color: black;
+    font-size: 24px;
+    position: absolute;
+    top: 150px;
+    left: 660px;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+
+  #AddRecButton{
+    color: black;
+    font-size: 18px;
+    width: 210px;
+    height: 40px;
+    position: absolute;
+    top: 190px;
+    left: 670px;
+    background-color: white;
+    border: 3px solid #af6343;
+    border-radius: 15px;
+  }
+
+  #AddRecButton:hover {
+    background-color: #af6343;
+    color: white;
+  }
+
+  .blockUserRec {
+    height: 550px;
+    width: 625px;
+    background-color: #f6f3ef;
+    border: 3px solid #af6343;
+    border-radius: 25px;
+    position: absolute;
+    top: 250px;
+  }
+
+  #blockUserRecOne{
+    left: 73pt;
+  }
+
+  #blockUserRecTwo{
+    left: 615pt;
+  }
+
+  #textUserRec{
+    color: black;
+    font-size: 24px;
+    position: absolute;
+    top: 25px;
+    left: 220px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  #textFavUserRec{
+    color: black;
+    font-size: 24px;
+    position: absolute;
+    top: 25px;
+    left: 175px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .subblockUserRec {
+    height: 200px;
+    width: 550px;
+    background-color: #f6f3ef;
+    border: 3px solid #af6343;
+    border-radius: 15px;
+    position: absolute;
+    left: 27px;
+  }
+
+  .nameAuthorRec {
+    color: black;
+    font-size: 16px;
+    position: absolute;
+    right: 50px;
+    text-align: center;
+    top: 75pt;
+    left: 200pt;
+  }
+
+  .nameUserRec {
+    color: black;
+    text-decoration: none;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: absolute;
+    right: 50px;
+    text-align: center;
+    top: 25pt;
+    left: 200pt;
+  }
+
+  .nameUserRec:hover {
+    color: #af6343;
+  }
+
+  .UserTimeCooking{
+    color: black;
+    font-size: 16px;
+    position: absolute;
+    top: 140px;
+    left: 275px;
+    right: 50px;
+    text-align: center;
+  }
+
+  /*СТРАНИЦА РЕЗУЛЬТАТОВ ПОИСКА/ФИЛЬТРАЦИИ*/
+  #textSearchRes{
+    color: black;
+    font-size: 24px;
+    position: absolute;
+    top: 150px;
+    left: 630px;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+
+  #textFilterRes{
+    color: black;
+    font-size: 24px;
+    position: absolute;
+    top: 200px;
+    left: 610px;
+    white-space: nowrap;
+  }
+
+  #textCountRes{
+    color: black;
+    font-size: 24px;
+    position: absolute;
+    top: 255px;
+    left: 595px;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+
+  .blockSearchRec {
+    height: 400px;
+    width: 310px;
+    background-color: #f6f3ef;
+    border: 3px solid #af6343;
+    position: absolute;
+  }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript" src="/js/jquery-3.6.2.js"></script>
+  <meta charset="utf-8">
+  <meta name="description" content="Страница описания рецепта">
+  <meta name="keywords" content="Povarenok, рецепты, html">
+  <title>Povarenok</title>
+  <link rel="stylesheet" href="/css/app.css">
+
+  <script type="text/javascript" src="../js/app.js"> </script>
+</head>
+<body onload="changeHeightRec()">
+    <div id="headerBlock">
+      <div> <a href="index.html"><img src="../img/logo.png" id="logoImage" alt="Логотип"> </a> </div>
+
+      <div id="textPovarenok"> Povarenok </div>
+
+      <div id="searchBlock">
+        <div> <img src="../img/lupa.png" id="lupa" alt=""> </div>
+
+        <div>
+          <input type="searchLine" placeholder="Поиск по рецептам" maxlength="100" required
+                 oninput="this.value = this.value.replace(/[^а-яёА-ЯЁ\s]/gi, '');"
+                 name="searchLine" id="searchLine">
+        </div>
+
+        <div>
+          <a href="searchRes.html"><button type="submit" onclick="searchKeywords()" id="findButton" name="findButton"> Найти </button> </a>
+        </div>
+      </div>
+
+      <div>
+        <img src="../img/user.png" id="signInImage" alt="Пользователь">
+      </div>
+
+<!--      <div>-->
+<!--        <a id="signInButton"  href="signIn.html" target="_self">Войти</a>-->
+<!--      </div>-->
+    </div>
+
+    <div>
+      <textarea class="infoRec" name="infoNameRec" id="infoNameRec" readonly>Борщ с курицей</textarea>
+    </div>
+
+    <div id="infoRecLeftBlock">
+      <div>
+        <textarea class="infoRec" name="infoDecRec" id="infoDecRec" readonly >Этот рецепт пиццы-запеканки - любимое блюдо всей семьи, которое проверено детьми и одобрено мужем. Это отличное основное блюдо, чтобы накормить толпу, на его приготовление не уходит много сил и времени. Количество ингредиентов - на праздничный стол с гостями. Для ужина в кругу семьи уменьшите все как минимум вдвое.</textarea>
+      </div>
+
+      <div id="infoIngBlock">
+        <div>
+          <div id="infoIngText"><b>Ингредиенты:</b></div>
+          <textarea class="infoRec" name="infoIngRec" id="infoIngRec" readonly >Говядина - 500 г
+Свёкла - 1 шт.
+Картофель - 2 шт.
+Капуста белокочанная - 200 г
+Морковь - 1 шт.
+Лук репчатый - 1 шт.
+Томатная паста - 1 ст. ложка
+Зелень укропа и/или петрушки (для подачи) - 3-4 веточки</textarea>
+      </div>
+      </div>
+
+      <div id="infoStepBlock">
+        <div>
+          <div id="infoStepText"><b>Способ приготовления:</b></div>
+          <textarea class="infoRec" name="infoStepRec" id="infoStepRec" readonly >Налейте в кастрюлю холодную воду, выложите мясо и поставьте на средний огонь. Бульон будет вкуснее, если использовать именно мясо на кости.
+Следите за бульоном, перед закипанием снимите пену.
+
+Вымойте и почистите свёклу, морковь и лук. Свёклу натрите на крупной тёрке, а морковь — на средней.
+Лук нарежьте небольшими кубиками.
+
+Налейте масло в сковороду, включите средний огонь. Обжаривайте лук и морковь, помешивая, около 5 минут.</textarea>
+        </div>
+      </div>
+    </div>
+
+    <div id="infoRecRightBlock">
+      <div> <img class="recImage" id="infoRecImage" alt="Изображение рецепта"> </div>
+      <div>
+        <div id="catBlockInfoRec">
+          <div><b>Категория:</b></div>
+          <div name="infoCatRec" id="infoCatRec" >Супы</div>
+        </div>
+
+        <div id="typeCusBlockInfoRec">
+          <div><b>Тип кухни:</b></div>
+          <div name="infoTypeCusRec" id="infoTypeCusRec" >Русская</div>
+        </div>
+
+        <div id="authorBlockInfoRec">
+          <div><b>Автор:</b></div>
+          <div name="infoAuthorRec" id="infoAuthorRec" >nkazimirov</div>
+        </div>
+
+        <div id="timeCookingBlockInfoRec">
+          <div><b>Время приготовления:</b></div>
+          <div name="infoTimeCookingRec" id="infoTimeCookingRec" >1 ч 45 мин</div>
+        </div>
+
+        <div id="dateBlockInfoRec">
+          <div><b>Дата добавления:</b></div>
+          <div name="infoDateRec" id="infoDateRec" >10.10.2022</div>
+        </div>
+
+<!--        changeNameButton()-->
+        <div>
+          <button type="submit" id="addFavorites" name="addFavorites" onclick="postSaveReq()" >
+            Добавить в избранное</button>
+        </div>
+      </div>
+    </div>
+
+
+</body>
+</html>

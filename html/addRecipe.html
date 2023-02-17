@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Страница добавления рецепта">
+    <title>Povarenok</title>
+    <link rel="stylesheet" href="/css/app.css">
+    <script type="text/javascript" src="../js/app.js"></script>
+    <script type="text/javascript" src="/js/jquery-3.6.2.js"></script>
+</head>
+<body  onload="dragAndDropFunc()">
+    <div id="headerBlock">
+      <div> <a href="index.html"><img src="../img/logo.png" id="logoImage" alt="Логотип"> </a> </div>
+      <div id="textPovarenok"> Povarenok </div>
+      <div>
+        <img src="../img/user.png" id="signInImage" alt="Пользователь">
+      </div>
+
+<!--      <div>-->
+<!--        <a id="signInButton"  href="signIn.html"  target="_self"> Войти </a>-->
+<!--      </div>-->
+    </div>
+
+    <div>
+      <input class="inputAddRec" type="text" placeholder="Введите название блюда" minlength="2" maxlength="100" required
+             oninput="this.value = this.value.replace(/[^а-яёЁ\s]/gi, '');"
+             name="inputNameRec" id="inputNameRec" onchange="toggleButtonAddRec()">
+    </div>
+
+    <div class="line" id="lineNameRec"> </div>
+
+    <div>
+      <textarea class="inputAddRec" placeholder="Добавьте описание блюда" rows="8" cols="70" minlength="2" maxlength="500" required
+                oninput="this.value = this.value.replace(/[^а-яёЁ\s]/gi, '');"
+                name="inputDecRec" id="inputDecRec" onchange="toggleButtonAddRec()"></textarea>
+    </div>
+
+    <div class="line" id="lineDecRec"> </div>
+
+    <div>
+       <input class="addIngRec" type="text" placeholder="Добавьте название ингредиента" minlength="2" maxlength="100" required
+            oninput="this.value = this.value.replace(/[^а-яёЁ\s]/gi, '');"
+            name="inputIngRec1" id="inputIngRec1" onchange="toggleButtonAddRec()">
+    </div>
+
+    <div>
+       <input class="addGrRec" type="text" placeholder="граммы" minlength="1" maxlength="5" required
+              oninput="this.value = this.value.replace(/[^0-9\s]/gi, '');"
+              name="inputGrRec1" id="inputGrRec1" onchange="toggleButtonAddRec()">
+    </div>
+
+    <div id="addedIngRec">
+    </div>
+
+    <div>
+      <button type="button" id="addIngButton" onclick="addIngBlock()">
+        <img src="../img/addIngrImg.png" class="addIngImg" alt="Добавить ингредиент">
+      </button>
+    </div>
+
+    <div id="addIngText"> Добавить ингредиент </div>
+
+    <div class="line" id="lineAddIngRec"> </div>
+
+    <div>
+      <textarea class="inputAddRec" placeholder="Добавьте пошаговый рецепт" rows="71" cols="70" minlength="20"
+                maxlength="5000" required
+                oninput="this.value = this.value.replace(/[^а-яёЁ0-9\s]/gi, '');"
+                name="inputStepRec" id="inputStepRec" onchange="toggleButtonAddRec()"></textarea>
+    </div>
+
+    <div class="dropImgZone">
+      <img src="../img/addImg.png" id="addImg" alt="добавить фото">
+      <div id="addImgRecText"> Добавьте фото блюда </div>
+      <div class="images">
+      </div>
+    </div>
+
+    <div id="comboBoxBlockAddRec">
+      <div id="chooseCatText"> Выберите категорию и тип кухни </div>
+
+      <div>
+        <select class="comboBoxAddRec" name="categoryAddRec" id="categoryAddRec" onchange="toggleButtonAddRec()">
+          <option selected value="">Категория</option>
+        </select>
+      </div>
+
+      <div>
+        <select class="comboBoxAddRec"  name="typeCuisAddRec" id="typeCuisAddRec" onchange="toggleButtonAddRec()">
+          <option selected value="">Тип кухни</option>
+        </select>
+      </div>
+
+      <div>
+        <input class="inputAddRec" type="text" placeholder="Введите время приготовления в минутах"
+               minlength="1" maxlength="4" required
+               oninput="this.value = this.value.replace(/[^0-9\s]/gi, '');"
+               name="inputTimeCook" id="inputTimeCook" onchange="toggleButtonAddRec()">
+      </div>
+
+
+      <div>
+        <a href="user.html">
+          <button type="button" onclick="postAddReq()" id="createRecButton" name="createRecButton" disabled onClick="uploadImages()">  <!--добавить отправку изображения на сервер-->
+            Создать рецепт
+          </button>
+        </a>
+      </div>
+    </div>
+</body>
+</html>
